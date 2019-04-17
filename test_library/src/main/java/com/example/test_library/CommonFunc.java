@@ -1,6 +1,7 @@
 package com.example.test_library;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -23,6 +24,7 @@ public class CommonFunc {
             @Override
             public void onResponse(JSONObject response) {
 
+                Log.d("NEWdata",response.toString());
                 callback.onSuccessResponse(response);
             }
         }, new Response.ErrorListener()
